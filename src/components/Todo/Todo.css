@@ -1,7 +1,7 @@
 .todo{
     background: #eee;
     width: 40rem;
-    height: 60rem;
+    min-height: 60rem;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
 }
