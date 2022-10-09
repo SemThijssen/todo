@@ -1,7 +1,11 @@
 
 import "./Todo.css"
-const Todo = () => {
-    return( 
+const Todo = (props) => {
+    let double = props.tasks.map( task => {
+        return task + task;
+    });
+    console.log(double);
+    return(
 <article className="todo">
     <header class="todo__header">
         <h1 class="todo__heading">Things to do:</h1>
