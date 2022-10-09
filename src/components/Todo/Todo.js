@@ -2,27 +2,34 @@
 import "./Todo.css"
 const Todo = () => {
     const tasks =  [
-        "Groceries",
-        "Walking the dog",
-        "Studying",
-        "Message girlfriend",
-        "Code awesome stuff",
-        "Code more awesome stuff",
-        "Groceries",
-        "Walking the dog",
-        "Studying",
-        "Message girlfriend",
-        "Code awesome stuff",
-        "Code more awesome stuff",
-        "Groceries",
-        "Walking the dog",
-        "Studying",
-        "Message girlfriend",
-        "Code awesome stuff",
-        "Code more awesome stuff",
+        {
+            name:"Groceries",
+            done: true,},
+            {
+            name:"Walking the dog",
+            done: true,},
+            {
+            name:"Studying",
+            done: false,},
+            {
+            name:"Message girlfriend",
+            done: false,},
+            {
+              name:"Code awesome stuff",
+              done: false,},
+            {
+              name:"Code more awesome stuff",
+              done: false,},
+
+      
+       
+      
     ];
     let listItems = tasks.map( task => {
-        return <li class="todo__item">{task}</li>
+        if(task.done === true){
+            return <li class="todo__item todo__item--done">{task.name}</li>
+        }
+        return <li class="todo__item">{task.name}</li>
     });
    
 
