@@ -1,4 +1,4 @@
-
+import Item from"../Item/Item";
 import "./Todo.css"
 const Todo = () => {
     const tasks =  [
@@ -25,15 +25,15 @@ const Todo = () => {
        
       
     ];
+    let todoClick = () =>{
+        console.log(this);
+    }
     let listItems = tasks.map( task => {
-        if(task.done === true){
-            return <li class="todo__item todo__item--done">{task.name}</li>
-        }
-        return <li class="todo__item">{task.name}</li>
+        return <Item name={task.name} done={task.done}/>
     });
    
 
-    console.log(listItems);
+    
     return(
 <article className="todo">
     <header class="todo__header">
