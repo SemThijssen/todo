@@ -5,7 +5,7 @@ class Item extends React.Component{
 constructor(props){
     super(props);
     this.className = "";
-    this.state = {name: this.props.name, done:this.props.done}
+    this.state = {done:this.props.done}
 }
    onItemClick = () =>{
         this.setState({done: !this.state.done});
@@ -19,7 +19,7 @@ constructor(props){
         else{this.className = "todo__item "}
         console.log(this.state.done);
        return(
-            <li onClick={this.onItemClick} class={this.className}>{this.state.name }</li>
+            <li onClick={this.onItemClick} class={this.className}>{this.props.name }</li>
     )
 }
 
