@@ -4,40 +4,45 @@ const Todo = () => {
     const tasks =  [
         {
             name:"Groceries",
-            done: true,},
+            done: true,
+            id: 1},
             {
             name:"Walking the dog",
-            done: true,},
+            done: true,
+            id: 2},
             {
             name:"Studying",
-            done: false,},
+            done: false,
+            id: 3},
             {
             name:"Message girlfriend",
-            done: false,},
+            done: false,
+            id: 4},
             {
               name:"Code awesome stuff",
-              done: false,},
+              done: false,
+              id: 5},
             {
               name:"Code more awesome stuff",
-              done: false,},
+              done: false,
+              id: 6},
 
       
        
       
     ];
-    let todoClick = () =>{
-        console.log(this);
-    }
+    
+    
     let listItems = tasks.map( task => {
-        return <Item name={task.name} done={task.done}/>
+        return <Item key ={task.id}name={task.name} done={task.done}/>
     });
    
 
     
     return(
 <article className="todo">
-    <header class="todo__header">
-        <h1 class="todo__heading">Things to do:</h1>
+    <header className="todo__header">
+        <h1 className="todo__heading">muzieklijst</h1>
     </header>
     <ul className="todo__list">
        {listItems}
