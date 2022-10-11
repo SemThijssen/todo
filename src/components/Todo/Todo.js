@@ -1,54 +1,41 @@
+
+import React from "react";
 import Item from"../Item/Item";
-import "./Todo.css"
-const Todo = () => {
-    const tasks =  [
-        {
-            name:"Groceries",
-            done: true,
-            id: 1},
-            {
-            name:"Walking the dog",
-            done: true,
-            id: 2},
-            {
-            name:"Studying",
-            done: false,
-            id: 3},
-            {
-            name:"Message girlfriend",
-            done: false,
-            id: 4},
-            {
-              name:"Code awesome stuff",
-              done: false,
-              id: 5},
-            {
-              name:"Code more awesome stuff",
-              done: false,
-              id: 6},
+import "./Todo.css";
 
-      
-       
-      
-    ];
+   class Todo extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            tasks: [1],
+        }
+        this.setState({
+            tasks: this.state.tasks.push(1),
+        })
+    }
+     
     
     
-    let listItems = tasks.map( task => {
+    /*listItems = this.state.tasks.map( task => {
         return <Item key ={task.id}name={task.name} done={task.done}/>
-    });
+    });*/
    
+    render(){
+        return (
+            <article className="todo">
+                <header className="todo__header">
+                    <h1 className="todo__heading">muzieklijst</h1>
+                </header>
+                <ul className="todo__list">
+                   {this.listItems}
+                </ul>
+            </article>
+                );
+            } 
+    }
 
     
-    return(
-<article className="todo">
-    <header className="todo__header">
-        <h1 className="todo__heading">muzieklijst</h1>
-    </header>
-    <ul className="todo__list">
-       {listItems}
-    </ul>
-</article>
-    );
-}
+
 
 export default Todo;
