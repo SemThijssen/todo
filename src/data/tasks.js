@@ -1,4 +1,4 @@
-tasks = [
+ const tasks = [
     {
         name:"Groceries",
         done: true,
@@ -29,8 +29,6 @@ tasks = [
           done: false,
           id: 6
     },
-
-  
-   
-  
 ];
+
+export default {tasks};
