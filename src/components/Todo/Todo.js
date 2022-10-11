@@ -46,6 +46,9 @@ update = () => {
       });
         
 }
+inputPressedEnter = () =>{
+     console.log("vanuit Todo: Input heeft een enter ontvangen");
+}
     render(){
        
     let items = this.state.tasks.map(task =>{
@@ -60,7 +63,7 @@ update = () => {
                 <ul className="todo__list">
                    {items}
                 </ul>
-                <Input/>
+                <Input inputPressedEnter={this.inputPressedEnter}/>
             </article>
                 );
             } 

@@ -6,17 +6,20 @@ class Input extends React.Component{
         this.state = {inputValue: ""}
     }
 update = (event) => {
-    if(event.target.value === "Sem"){
-        this.setState({inputValue:"Sem!!!"});
-        return;
-    }
     this.setState({inputValue: event.target.value});
+}
     
-    
+   enter = (event) => {
+    if(event.keyCode === 13){
+        console.log("enter gedrukt");
+        this.props.inputPressedEnter();
+    }
+   
+
 }
     render(){
         return (
-        <input onChange={this.update} value={this.state.inputValue}class= "input" type="text" placeholder= "Boodschappen" />
+        <input onKeyUp={this.enter} onChange={this.update} value={this.state.inputValue}class= "input" type="text" placeholder= "Boodschappen" />
     ); }
     
 }
