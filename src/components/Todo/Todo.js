@@ -10,17 +10,22 @@ import "./Todo.css";
         this.state = {
             tasks: [1],
         }
-        this.setState({
-            tasks: this.state.tasks.push(1),
-        })
+      
     }
      
     
     
-    /*listItems = this.state.tasks.map( task => {
-        return <Item key ={task.id}name={task.name} done={task.done}/>
-    });*/
+    componentDidMount(){  
+        console.log("vanuit de mount!");
+        this.setState({
+            tasks: this.state.tasks.push(1),
+        }) 
+    }
+
    
+componentDidUpdate(){
+console.log("vanuit de update")
+}
     render(){
         return (
             <article className="todo">
