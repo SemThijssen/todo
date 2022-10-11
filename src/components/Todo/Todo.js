@@ -18,7 +18,7 @@ import "./Todo.css";
     
     
     componentDidMount(){  
-        console.log("vanuit de mount!");
+        
         this.setState({
             tasks: tasksObject.tasks,
         }) 
@@ -26,13 +26,13 @@ import "./Todo.css";
 
    
 componentDidUpdate(){
-console.log("vanuit de update");
+
 
 
 }
 
 update = () => {
-    console.log("Ik ben geklikt");
+    
     let tempArray = this.state.tasks;
     let combinedArray = tempArray.concat([
         {
@@ -44,16 +44,16 @@ update = () => {
       this.setState({
         tasks: combinedArray,
       });
-        console.log(combinedArray);
+        
 }
     render(){
-        console.log(this.state.tasks);
+       
     let items = this.state.tasks.map(task =>{
         return <Item name={task.name} key={task.id}></Item>
     });
-        console.log("Vanuit de render!");
+        
         return (
-            <article onClick={this.update}className="todo">
+            <article className="todo">
                 <header className="todo__header">
                     <h1 className="todo__heading">muzieklijst</h1>
                 </header>
