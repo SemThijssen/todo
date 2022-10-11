@@ -1,6 +1,7 @@
 
 import React from "react";
 import Item from"../Item/Item";
+import Input from "../Input/Input";
 import tasksObject from"../../data/tasks";
 import "./Todo.css";
 
@@ -59,6 +60,7 @@ update = () => {
                 <ul className="todo__list">
                    {items}
                 </ul>
+                <Input/>
             </article>
                 );
             } 
