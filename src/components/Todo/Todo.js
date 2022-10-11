@@ -32,15 +32,18 @@ console.log("vanuit de update");
 
 update = () => {
     console.log("Ik ben geklikt");
-    this.setState({
-        tasks: this.state.tasks.push(
-            {
-                name:"Groceries",
-                done: true,
-                id: 1
-            },
-        )
-    })
+    let tempArray = this.state.tasks;
+    let combinedArray = tempArray.concat([
+        {
+            name: "Todo afmaken",
+            done: false,
+            id: 10,
+        }
+      ])
+      this.setState({
+        tasks: combinedArray,
+      });
+        console.log(combinedArray);
 }
     render(){
         console.log(this.state.tasks);
