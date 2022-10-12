@@ -51,7 +51,7 @@ inputPressedEnter = (inputFromInputComponent) =>{
         {
             name: inputFromInputComponent,
             done: false,
-            id: 100,
+            id: this.state.tasks.length + 1,
         }
      ]
       let mergedArray = this.state.tasks.concat(toBeAdded);
@@ -62,14 +62,15 @@ inputPressedEnter = (inputFromInputComponent) =>{
     render(){
        
     let items = this.state.tasks.map(task =>{
-        return <Item name={task.name} key={task.id}></Item>
+        return <Item done={task.done}name={task.name} key={task.id}></Item>
     });
         
         return (
             <article className="todo">
                 <header className="todo__header">
-                    <h1 className="todo__heading">muzieklijst</h1>
+                    <h1 className="todo__heading">{this.props.titel || "Titel"}</h1>
                 </header>
+                
                 <ul className="todo__list">
                    {items}
                 </ul>

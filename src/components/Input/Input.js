@@ -10,8 +10,15 @@ update = (event) => {
 }
     
    enter = (event) => {
-    if(event.keyCode === 13){
-        console.log("enter gedrukt");
+    if(event.keyCode === 13 && this.state.inputValue !== ""){
+        this.props.inputPressedEnter(this.state.inputValue);
+    }
+   
+
+}
+
+button = () => {
+    if(this.state.inputValue !== ""){
         this.props.inputPressedEnter(this.state.inputValue);
     }
    
@@ -19,7 +26,11 @@ update = (event) => {
 }
     render(){
         return (
-        <input onKeyUp={this.enter} onChange={this.update} value={this.state.inputValue}class= "input" type="text" placeholder= "Boodschappen" />
+            <div>
+        <input onKeyUp={this.enter} onChange={this.update} value={this.state.inputValue}class= "input" type="text" placeholder= "Muziek" />
+        <button onClick={this.button} class="submit"><p>Submit</p></button>
+        </div>
+        
     ); }
     
 }

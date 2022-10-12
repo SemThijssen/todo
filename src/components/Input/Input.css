@@ -5,3 +5,36 @@
     font-family: "Open Sans", sans-serif;
     
 }
+.submit{
+    background: hsl(220, 70%, 60%);
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background: hsl(220, 70%, 50%);
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    border: none;
+    
+}
+.submit:active{
+    background: hsl(220, 70%, 40%);
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+    border: none;
+}
