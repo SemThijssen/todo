@@ -46,8 +46,18 @@ update = () => {
       });
         
 }
-inputPressedEnter = () =>{
-     console.log("vanuit Todo: Input heeft een enter ontvangen");
+inputPressedEnter = (inputFromInputComponent) =>{
+     let toBeAdded = [
+        {
+            name: inputFromInputComponent,
+            done: false,
+            id: 100,
+        }
+     ]
+      let mergedArray = this.state.tasks.concat(toBeAdded);
+     this.setState({
+        tasks: mergedArray,
+     })
 }
     render(){
        

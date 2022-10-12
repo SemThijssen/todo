@@ -12,7 +12,7 @@ update = (event) => {
    enter = (event) => {
     if(event.keyCode === 13){
         console.log("enter gedrukt");
-        this.props.inputPressedEnter();
+        this.props.inputPressedEnter(this.state.inputValue);
     }
    
 
